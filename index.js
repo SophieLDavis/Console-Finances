@@ -87,26 +87,33 @@ var finances = [
 ['Feb-2017', 671099] //finances [85][1]
 ];
 
-//question 1
-console.log(finances.length);
+console.log('Financial Analysis')
+console.log('-----------------------')
+//question 1: The total number of months included in the dataset.
+console.log('Total Months'+ ': ' + finances.length);
 
-//question 2
+//question 2:The net total amount of Profit/Losses over the entire period.
 var total=0;
 for (i=0; i<finances.length; i++) {;
 total= total + finances[i][1];
 };
-console.log(total);
+console.log('Total'+ ': $'+ total);
 
-//question 3
+//question 3: The average of the changes in Profit/Losses over the entire period.
+//3a: You will need to track what the total change in profits are from month to month and then find the average.
 const financeChanges=[];
 for (i=0; i<finances.length-1; i++) {;
 financeChanges.push([finances[i][1]-finances[i+1][1]]);
 }
-console.log(financeChanges.length);
 
+//3b: (Total/Number of months)
+total=0;
+var average=0
 for (i=0; i<finances.length-1; i++) {;
-financeChanges
-}
+total=total+finances[i][1];
+};
+average=total/financeChanges.length;
+console.log('Average change'+ ':$ ' + Math.round(average));
 
 // another for loop to add all 85 array together and then divide by 85= average 
 
