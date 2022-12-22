@@ -84,14 +84,49 @@ var finances = [
 ['Nov-2016', 795914],
 ['Dec-2016', 60988],
 ['Jan-2017', 138230],
-['Feb-2017', 671099]
+['Feb-2017', 671099] //finances [85][1]
 ];
 
+//question 1
 console.log(finances.length);
 
+//question 2
 var total=0;
-for (i=0; i<finances.length; i++) {
-total= total + finances[i][1]
+for (i=0; i<finances.length; i++) {;
+total= total + finances[i][1];
+};
+console.log(total);
+
+//question 3
+const financeChanges=[];
+for (i=0; i<finances.length-1; i++) {;
+financeChanges.push([finances[i][1]-finances[i+1][1]]);
 }
-console.log(total)
+console.log(financeChanges.length);
+
+for (i=0; i<finances.length-1; i++) {;
+financeChanges
+}
+
+// another for loop to add all 85 array together and then divide by 85= average 
+
+//const array=[]
+//const array=financeChanges;
+//console.log(array.length)
+
+
+
+//console.log(array.push(financeChanges))
+//console.log(financeChanges);
+
+//var averageChange=0;
+//for (i=0; i<financeChanges.length; i++) {;
+//total= total + financesChanges[i][1];
+//};
+//console.log(averageChange);
+
+//financeChanges.push = new array 
+//finance[1][1]-finances[0][1]= 867884-984665
+//finance[2][1]-finances[1][1]=
+//finance[3][1]-finances[2][1]
 

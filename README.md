@@ -20,7 +20,20 @@ The average of the changes in Profit/Losses over the entire period.
 You will need to track what the total change in profits are from month to month and then find the average.
 (Total/Number of months)
 
+1.To track what the total change in profit month to month...
+for loop 
 
+ create new array called it financeChanges to store changes for each months
+// loop finances array and calculate the changes
+// for i in finances
+//   var profitLosses = finances[i][1]
+//   financeChanges.push(finances[i+1][1] - finances[i][1])
+// Be careful on the last month finances[i+1] will not exist!
+// find out the length of financeChanges array
+// Calculate the total changes using the same method as the previous question
+// Calculate the average
+
+2.
 
 The greatest increase in profits (date and amount) over the entire period.
 
