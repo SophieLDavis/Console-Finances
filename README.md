@@ -38,7 +38,44 @@ for loop
 The greatest increase in profits (date and amount) over the entire period.
 
 
-The greatest decrease in losses (date and amount) over the entire period.
+
+// The greatest increase in profits (date and amount) over the entire period.
+// var highestEarning = 0
+// for i in financeChanges
+//   compare financeChanges[i] with highestEarning
+//   if financeChanges[i] > highestEarning then replace highestEarning with financeChanges[i]
+// Or use Math.max() for the amount, or sort from highest to lowest and get the value of the first index
+// how about the date?
+// Find the index of the maximum element in financeChanges array
+// get the month from finance array with the same index that we have found
+
+// The greatest decrease in losses (date and amount) over the entire period.
+// Google "how to find minimum value of an array in javascript"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Message live
+
+
+
+
+
+
+
+
 
 
 When you open your code in the browser your resulting analysis should look similar to the following:

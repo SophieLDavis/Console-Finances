@@ -8,7 +8,7 @@ var finances = [
 ['Jul-2010', 1033096],
 ['Aug-2010', 604885],
 ['Sep-2010', -216386],
-['Oct-2010', 477532],
+['Oct-201e0', 477532],
 ['Nov-2010', 893810],
 ['Dec-2010', -80353],
 ['Jan-2011', 779806],
@@ -87,8 +87,8 @@ var finances = [
 ['Feb-2017', 671099] //finances [85][1]
 ];
 
-console.log('Financial Analysis')
-console.log('-----------------------')
+console.log('Financial Analysis');
+console.log('-----------------------');
 //question 1: The total number of months included in the dataset.
 console.log('Total Months'+ ': ' + finances.length);
 
@@ -100,20 +100,73 @@ total= total + finances[i][1];
 console.log('Total'+ ': $'+ total);
 
 //question 3: The average of the changes in Profit/Losses over the entire period.
-//3a: You will need to track what the total change in profits are from month to month and then find the average.
-const financeChanges=[];
+//3a) Find the changes in Profit/Losses by month.
+let financeChanges=[];
 for (i=0; i<finances.length-1; i++) {;
 financeChanges.push([finances[i][1]-finances[i+1][1]]);
 }
 
-//3b: (Total/Number of months)
-total=0;
-var average=0
+//3b) Find the total of changes in Profit/Losses and divide by the length of array to find the average.
+var total=0;
 for (i=0; i<finances.length-1; i++) {;
-total=total+finances[i][1];
+    total=total+finances[i][1];
 };
 average=total/financeChanges.length;
-console.log('Average change'+ ':$ ' + Math.round(average));
+console.log('Average change'+ ': $' + Math.round(average));
+
+//question 4: Greatest Increase in Profits: Feb-2012 ($)
+var highestEarning=0;
+highestEarning= Math.max(...financeChanges);
+console.log(highestEarning);
+// how about the date?
+for(i=0; i<finances.length-1; i++);{
+if (highestEarning==financesChanges[i])
+console.log([i]);
+}
+
+console.log(financeChanges[1])
+console.log(financeChanges[2])
+console.log(financeChanges[3])
+console.log(financeChanges[4])
+console.log(financeChanges[5])
+
+//until 
+console.log (financeChanges[85])
+
+//I want to work out which [i] in financeChanges[i] = highestEarning =2196167
+// I get 85 but financeChanges[85]
+
+
+
+//indexOf()
+
+    //console.log(financeChanges[i][1]);
+    
+
+// The greatest increase in profits (date and amount) over the entire period.
+// var highestEarning = 0
+// for i in financeChanges
+//   compare financeChanges[i] with highestEarning
+//   if financeChanges[i] > highestEarning then replace highestEarning with financeChanges[i]
+// Or use Math.max() for the amount, or sort from highest to lowest and get the value of the first index
+// how about the date?
+// Find the index of the maximum element in financeChanges array
+// get the month from finance array with the same index that we have found
+
+
+//console.log(typeof total);
+
+//console.log(Math.max(total));
+
+//console.log(Math.min(total));
+
+
+//math.min
+
+//question 5: Greatest Decrease in Profits: Sep-2013 ($-)
+
+
+
 
 // another for loop to add all 85 array together and then divide by 85= average 
 
