@@ -101,8 +101,6 @@ total= total + finances[i][1];
 console.log('Total'+ ': $'+ total);
 
 //question 3: The average of the changes in Profit/Losses over the entire period.
-
-//3b) Find the total of changes in Profit/Losses and divide by the length of array to find the average.
 var total=0;
 for (i=0; i<finances.length-1; i++) {;
     total=total+finances[i][1]-finances[i+1][1];
@@ -111,40 +109,38 @@ average=total/finances.length;
 console.log('Average change'+ ': $' + Math.round(average));
 
 //question 4: Greatest Increase in Profits:
-  function findLargestIncrease(arr) {
+  function findLargestIncrease(arr) {;
     let month = arr[0];
     let maxDiff = -1;  // initialize maxDiff to a very small negative number
-    for (let i = 1; i < arr.length; i++) {  // start the loop at index 1
+    for (let i = 1; i < arr.length; i++) {; // start the loop at index 1
       let diff = arr[i][1] - arr[i - 1][1];  // calculate the difference between the current element and the previous element
-      if (diff > maxDiff) {  // if the difference is larger than the current maxDiff
+      if (diff > maxDiff) {;  // if the difference is larger than the current maxDiff
         maxDiff = diff;  // update maxDiff to be the new larger difference
         month= arr[i];
-      }
-    }
+      };
+    };
     return [month[0], maxDiff];
-  }
+  };
 
   let maxIncrease = findLargestIncrease(finances);
   //console.log(maxIncrease); -> prints "(2) ['Feb-2012', 1926159]"
-  console.log( "Greatest Increase in Profits: Feb-2012 ($1926159)")
+  console.log( "Greatest Increase in Profits: Feb-2012 ($1926159)");
 
 //question 5: Greatest Decrease in Profits: Sep-2013 ($-)
 // Google "how to find minimum value of an array in javascript"
-function findLargestDecrease(arr) {
+function findLargestDecrease(arr) {;
 let anotherMonth = arr[0];
 let min = -1;
-for (let i= 1; i< arr.length; i++) {
+for (let i= 1; i< arr.length; i++) {;
   let diff = arr[i][1] - arr[i - 1][1];
-  if (diff < min) {
+  if (diff < min) {;
     min= diff; 
     anotherMonth[i];
-  }
-}
+  };
+};
 return [anotherMonth[0], min];
-}
+};
 
 let maxDecrease= findLargestDecrease(finances);
 //console.log(maxDecrease); -> prints "(2) ['Jan-2010', -2196167]"
-console.log("Greatest Decrease in Profits: Jan-2010 ($-2196167)")
-
-//find largest - number in changes / minimum value 
+console.log("Greatest Decrease in Profits: Jan-2010 ($-2196167)");
