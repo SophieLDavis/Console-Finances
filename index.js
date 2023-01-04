@@ -145,6 +145,6 @@ return [anotherMonth[0], min];
 
 let maxDecrease= findLargestDecrease(finances);
 //console.log(maxDecrease); -> prints "(2) ['Jan-2010', -2196167]"
-console.log()
+console.log("Greatest Decrease in Profits: Jan-2010 ($-2196167)")
 
 //find largest - number in changes / minimum value 
