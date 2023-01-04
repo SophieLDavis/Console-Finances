@@ -89,6 +89,7 @@ var finances = [
 
 console.log('Financial Analysis');
 console.log('-----------------------');
+
 //question 1: The total number of months included in the dataset.
 console.log('Total Months'+ ': ' + finances.length);
 
@@ -109,13 +110,7 @@ for (i=0; i<finances.length-1; i++) {;
 average=total/finances.length;
 console.log('Average change'+ ': $' + Math.round(average));
 
-//question 4: Greatest Increase in Profits: Feb-2012 ($)
-//var highestEarning=0;
-//highestEarning= Math.max(...financeChanges);
-//console.log(highestEarning);
-
-//how about the date?
-
+//question 4: Greatest Increase in Profits:
   function findLargestIncrease(arr) {
     let month = arr[0];
     let maxDiff = -1;  // initialize maxDiff to a very small negative number
@@ -126,73 +121,30 @@ console.log('Average change'+ ': $' + Math.round(average));
         month= arr[i];
       }
     }
-    return [month[0], maxDiff]
+    return [month[0], maxDiff];
   }
 
   let maxIncrease = findLargestIncrease(finances);
-  console.log(maxIncrease);
-
-  
-
-  /*function findLargestIncrease(finances) {
-    let maxDiff = -1;  // initialize maxDiff to a very small negative number
-    for (let i = 1; i < finances.length; i++) {  // start the loop at index 1
-      let diff = finances[i] - finances[i - 1];  // calculate the difference between the current element and the previous element
-      if (diff > maxDiff) {  // if the difference is larger than the current maxDiff
-        maxDiff = diff;  // update maxDiff to be the new larger difference
-      }
-    }
-    return maxDiff;
-  }
-
-  let maxIncrease= findLargestIncrease(finances);
-  console.log(maxIncrease);
-
-
-
-
-  
-/*attempt 1
-/for(i=0; i<finances.length-1; i++);{
-if (finances[i]-finances[i+1]==highestEarning) {
-} return (console.log(i));
-}
-
-/*attempt2
-for(i=0; i<finances.length-1; i++);{
-    if (financeChanges[i]==highestEarning) {
-    } else (console.log(i));
-    }
-
-*/
-//console.log(financeChanges[1])
-//console.log(financeChanges[2])
-//console.log(financeChanges[3])
-//console.log(financeChanges[4])
-//console.log(financeChanges[5])
-//until... 
-//console.log (financeChanges[85])
-
-//I want to work out which [i] in financeChanges[i] = highestEarning (2196167)
-// I get 85 but financeChanges[85]= not 
+  //console.log(maxIncrease); -> prints "(2) ['Feb-2012', 1926159]"
+  console.log( "Greatest Increase in Profits: Feb-2012 ($1926159)")
 
 //question 5: Greatest Decrease in Profits: Sep-2013 ($-)
-
-
-
 // Google "how to find minimum value of an array in javascript"
+function findLargestDecrease(arr) {
+let anotherMonth = arr[0];
+let min = -1;
+for (let i= 1; i< arr.length; i++) {
+  let diff = arr[i][1] - arr[i - 1][1];
+  if (diff < min) {
+    min= diff; 
+    anotherMonth[i];
+  }
+}
+return [anotherMonth[0], min];
+}
 
-//var lowestEarning=0;
-//lowestEarning= Math.min(...financeChanges);
-//console.log(lowestEarning);
+let maxDecrease= findLargestDecrease(finances);
+//console.log(maxDecrease); -> prints "(2) ['Jan-2010', -2196167]"
+console.log()
 
-//for(i=0; i<finances.length-1; i++);{
-    //if (financeChanges[i]==lowestEarning) {
-   // } else (console.log(i));
-    //}
-
-    //3a) Find the changes in Profit/Losses by month.
-//let financeChanges=[];
-//for (i=0; i<finances.length-1; i++) {;
-//financeChanges.push([finances[i][1]-finances[i+1][1]]);
-//}
+//find largest - number in changes / minimum value 
