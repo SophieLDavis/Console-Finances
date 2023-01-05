@@ -1,6 +1,6 @@
 var finances = [
-['Jan-2010', 867884],//finances[0]
-['Feb-2010', 984655],//finances[1][1]
+['Jan-2010', 867884],
+['Feb-2010', 984655],
 ['Mar-2010', 322013],
 ['Apr-2010', -69417],
 ['May-2010', 310503],
@@ -84,7 +84,7 @@ var finances = [
 ['Nov-2016', 795914],
 ['Dec-2016', 60988],
 ['Jan-2017', 138230],
-['Feb-2017', 671099] //finances [85][1]
+['Feb-2017', 671099] 
 ];
 
 console.log('Financial Analysis');
@@ -111,11 +111,11 @@ console.log('Average change'+ ': $' + Math.round(average));
 //question 4: Greatest Increase in Profits:
   function findLargestIncrease(arr) {;
     let month = arr[0];
-    let maxDiff = -1;  // initialize maxDiff to a very small negative number
-    for (let i = 1; i < arr.length; i++) {; // start the loop at index 1
-      let diff = arr[i][1] - arr[i - 1][1];  // calculate the difference between the current element and the previous element
-      if (diff > maxDiff) {;  // if the difference is larger than the current maxDiff
-        maxDiff = diff;  // update maxDiff to be the new larger difference
+    let maxDiff = -1;  
+    for (let i = 1; i < arr.length; i++) {; 
+      let diff = arr[i][1] - arr[i - 1][1];  
+      if (diff > maxDiff) {; 
+        maxDiff = diff;  
         month= arr[i];
       };
     };
@@ -127,7 +127,6 @@ console.log('Average change'+ ': $' + Math.round(average));
   console.log( "Greatest Increase in Profits: Feb-2012 ($1926159)");
 
 //question 5: Greatest Decrease in Profits: Sep-2013 ($-)
-// Google "how to find minimum value of an array in javascript"
 function findLargestDecrease(arr) {;
 let anotherMonth = arr[0];
 let min = -1;
