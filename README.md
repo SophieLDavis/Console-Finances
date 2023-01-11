@@ -1,4 +1,4 @@
-# Javascript Challenge
+# Javascript Console Challenge
 
 ## Description
 In this challenge, the take is to write Javascript code to analyse the financial records of a company with the dataset provided. 
